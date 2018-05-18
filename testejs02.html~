@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<!--Início do head -->
+<head>
+	<title>Teste JavaScript</title>
+	<meta charset="utf-8"/>
+	<script>
+		var quebrada = false;
+		function mudaLampada(tipo) {	
+			if (!quebrada) {
+				document.getElementById("luz").src = "_imagens/" + tipo + ".jpg";
+				if (tipo == 'lampada-quebrada') {
+					quebrada = true;
+				}
+			}
+		}//fim de mudaLampada
+	</script>
+</head>
+
+<!--Início do body -->
+<body>
+	<h1>Testando JavaScript</h1>
+	<h2>Acenda a lâmpada</h2>
+	<img src="_imagens/lampada-apagada.jpg" id="luz" alt="Imagem Não encontrada" onmousemove="mudaLampada('lampada-acesa')" onmouseout="mudaLampada('lampada-apagada')" onclick="mudaLampada('lampada-quebrada')"/>
+	
+	<script>
+		//alert("Olá, mundo!");
+		//document.write("Olá! Hoje é dia " + Date());
+		
+	</script>
+</body>
+</html>
